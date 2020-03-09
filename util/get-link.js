@@ -12,8 +12,8 @@ const search = promisify(youtubeSearch);
  */
 const getLink = async songName => {
   try {
-    const result = await search(songName);
-    
+    const result = await search(songName + ' Audio Only');
+
     const [topResult] = result.videos;
 
     const youtubeLink = 'https://youtube.com' + topResult.url;
