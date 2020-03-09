@@ -15,6 +15,7 @@ const getLink = async songName => {
     const result = await search(songName + ' Audio Only');
 
     const [topResult] = result.videos;
+    console.log(topResult);
 
     const youtubeLink = 'https://youtube.com' + topResult.url;
 
